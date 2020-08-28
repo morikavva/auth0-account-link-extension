@@ -1,6 +1,6 @@
 {
   "title": "Auth0 Account Link",
-  "name": "auth0-account-link",
+  "name": "custom-auth0-account-link",
   "version": "2.6.0",
   "preVersion": "2.5.0",
   "author": "auth0",
