@@ -14,7 +14,6 @@ module.exports = function(currentUser, matchingUsers) {
 
   function loadLinkPage(token) {
     var linkEl = document.getElementById('link');
-    var skipEl = document.getElementById('skip');
     var connections = matchingUsers
       .reduce(function(acc, user) {
         return acc.concat(user.identities);
@@ -55,8 +54,6 @@ module.exports = function(currentUser, matchingUsers) {
         connection: connections[0]
       });
     });
-
-    updateContinueUrl(skipEl, token.iss, params.state);
 
     if (params.error_type === 'accountMismatch') {
       loadAccountMismatchError();
